@@ -18,3 +18,10 @@ save_results(job_id, layout_num)
 circuitb_evaluate.ipynb  
 usage:   
 calculate_QST_quantum_fidelity(filename)  
+
+### Data files:  
+structure:  
+backend name  
+layout (list of qubits used)  
+experiment end date  
+measured distributions (ordered by basis from XXXX to ZZZZ)  
