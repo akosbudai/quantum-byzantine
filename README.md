@@ -7,13 +7,13 @@ A repository for the source code of our paper on a quantum solution to the Byzan
 You can run experiments by running the ibm_quantum/circuitb/circuitb_run.ipynb jupyter notebook from the IBM Quantum Lab.
 After choosing the desired backend with the command 
 
-```
+```python
 backend = service.get_backend('ibmq_quito')
 ```
 
 the experiment can be run using the command
 
-```
+```python
 all_res = run_circuits(backend)
 ```
 
@@ -25,7 +25,7 @@ The variable ```all_res``` is a list of SamplerResult objects.
 Experiments can be saved to file using the jupyter notebook ibm_quantum/circuitb/circuitb_save.ipynb.
 An experiment with qiskit job id ```job_id``` can be saved using the command
 
-```
+```python
 save_results(job_id, layout_num)
 ```
   
@@ -35,7 +35,7 @@ Quantum fidelities can be calculated using the notebook ibm_quantum/circuitb/cir
 Fidelities are calculated for the data from a file.
 To calculate quantum fidelities, use
 
-```
+```python
 calculate_QST_quantum_fidelity(filename)
 ```
 
