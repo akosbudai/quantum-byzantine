@@ -26,7 +26,7 @@ for idx,m in enumerate(ms):
 
     #calculate the probability of a leakage event
     P_err = 1-(1-q)**m
-    P_err2 = m*q
+
     #calculate the total probability of failure
     P_total = (1 - P_err) * pf + P_err
 
@@ -34,7 +34,7 @@ for idx,m in enumerate(ms):
     Pts[idx] = P_total
 
     #print the results
-    print(m, P_total, P_err, P_err2)
+    print(m, P_total, P_err)
 
 #%%
 #find the index of the minimum
