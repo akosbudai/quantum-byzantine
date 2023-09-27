@@ -4,25 +4,18 @@ for a fixed error rate.
 """
 #%%
 import numpy as np
+import multiprocessing
 import byzantine_code as eqc
 
 #%%
-mu = 0.272
-l = 0.94
+#define error function
+def error_func(m):
+    #define the parameters of the protocol
+    mu = 0.272
+    l = 0.94
 
-#define error rate
-q = 1e-4
-
-#%%
-#define the quantum states for which pf is evaluated
-ms = np.arange(400, 653, 1)
-Pts = np.zeros(len(ms))
-
-#%%
-#evaluate pf for each m
-for idx,m in enumerate(ms):
-
-    print(m)
+    #define error rate
+    q = 1e-4    
 
     #calculate the failure probability for all the scenarios
     pfno = eqc.fprob_nofaulty(m = m, mu = mu, l = l)
@@ -38,13 +31,17 @@ for idx,m in enumerate(ms):
     #calculate the total probability of failure
     P_total = (1 - P_err) * pf + P_err
 
-    #store the results
-    Pts[idx] = P_total
-
-    #print the results
-    print(m, P_total, P_err)
+    return P_total
 
 #%%
-#print the results and find the index of the minimum failure probability
-print(Pts)
-print(ms[np.argmin(Pts)], Pts[np.argmin(Pts)])
+#define the number of states for which pf is evaluated
+ms = np.arange(400, 500, 1)
+
+#%%
+pool = multiprocessing.Pool(8)
+results = pool.map(error_func, ms)
+
+#%%
+#find the optimal number of states
+ind = np.argmin(results)
+print(ms[ind], results[ind])
