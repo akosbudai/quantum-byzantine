@@ -16,7 +16,7 @@ ls = np.linspace(0.9,0.98,10)
 points = eqc.optimalizator(ms = ms, mus = mus, ls = ls)
 
 #save the data
-np.savetxt(fname = "upperpanel_data.txt", X = points)
+#np.savetxt(fname = "../data/upperpanel_data.txt", X = points)
 
 #%%
 #and then generate the data for the lower panel
@@ -27,7 +27,7 @@ ls = np.linspace(0.93,0.952,10)
 
 points = eqc.optimalizator(ms = ms, mus = mus, ls = ls)
 
-np.savetxt(fname = "lowerpanel_data.txt", X = points)
+#np.savetxt(fname = "../data/lowerpanel_data.txt", X = points)
 
 #%% 
 #lets see a thin slice along the mu axis
@@ -38,4 +38,4 @@ ls = np.linspace(0.94,0.945,2)
 
 points = eqc.optimalizator(ms = ms, mus = mus, ls = ls)
 
-np.savetxt(fname = "thinslice_data.txt", X = points)
+#np.savetxt(fname = "../data/thinslice_data.txt", X = points)
