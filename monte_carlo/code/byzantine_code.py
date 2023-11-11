@@ -2,7 +2,7 @@ import numpy as np
 from scipy.stats import binom
 from math import comb
 
-def Prot_FC(m, faulty = None, mu = 0.272, l = 0.94):
+def Prot(m, faulty = None, mu = 0.272, l = 0.94):
 	"""
     Function that carries out one instance of the Monte Carlo type simulation for the protocol. 
     The adversary strategies used here are the same discussed in the paper.
@@ -327,7 +327,7 @@ def simple_stats(N, m, faulty=None, mu=0.272, l=0.94):
     #do the simulation N times
     for i in range(N):
         # increase the number of occurrences for an outcome
-        data[(Prot_FC(m=m, faulty=faulty, mu=mu, l=l))] += 1
+        data[(Prot(m=m, faulty=faulty, mu=mu, l=l))] += 1
         
     stat = np.array(data) / N  #obtain the probabilities
     
