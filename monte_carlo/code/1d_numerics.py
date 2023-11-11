@@ -20,8 +20,9 @@ probs = []
 
 for m in ms:
     probs.append(eqc.fprob_nofaulty(m = m, mu = mu, l = l))
-    
-np.savetxt(fname = "numdata_faulty0_mu0272_lambda094.txt", X = probs)
+
+#save the data 
+#np.savetxt(fname = "../data/numdata_faulty0_mu0272_lambda094.txt", X = probs)
 
 fig = plt.figure()
 plt.scatter(ms, probs)
@@ -33,8 +34,9 @@ probs = []
 
 for m in ms:
     probs.append(eqc.fprob_sfaulty(m = m, mu = mu, l = l))
-    
-np.savetxt(fname = "numdata_faulty1_mu0272_lambda094.txt", X = probs)
+
+#save the data 
+#np.savetxt(fname = "../data/numdata_faulty1_mu0272_lambda094.txt", X = probs)
 
 fig = plt.figure()
 plt.scatter(ms, probs)
@@ -47,7 +49,8 @@ probs = []
 for m in ms:
     probs.append(eqc.fprob_r0faulty(m = m, mu = mu, l = l))
     
-np.savetxt(fname = "numdata_faulty2_mu0272_lambda094.txt", X = probs)
+#save the data
+#np.savetxt(fname = "../data/numdata_faulty2_mu0272_lambda094.txt", X = probs)
 
 fig = plt.figure()
 plt.scatter(ms, probs)

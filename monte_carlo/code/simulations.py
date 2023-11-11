@@ -32,7 +32,7 @@ plt.scatter(ms,data[:])
 plt.show()
 
 #save the data
-np.savetxt(fname = "simdata_faulty0_mu0272_lambda094.txt", X = data)
+#np.savetxt(fname = "../data/simdata_faulty0_mu0272_lambda094.txt", X = data)
 
 #%%
 #faulty configuration
@@ -47,7 +47,7 @@ plt.scatter(ms,data[:])
 plt.show()
 
 #save the data
-np.savetxt(fname = "simdata_faulty1_mu0272_lambda094.txt", X = data)
+#np.savetxt(fname = "../data/simdata_faulty1_mu0272_lambda094.txt", X = data)
 
 #%%
 #faulty configuration
@@ -62,4 +62,4 @@ plt.scatter(ms,data[:])
 plt.show()
 
 #save the data
-np.savetxt(fname = "simdata_faulty2_mu0272_lambda094.txt", X = data)
+#np.savetxt(fname = "../data/simdata_faulty2_mu0272_lambda094.txt", X = data)
