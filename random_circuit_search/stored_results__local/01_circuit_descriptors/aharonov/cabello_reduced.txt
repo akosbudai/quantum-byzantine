@@ -1,0 +1,109 @@
+execution identifier: cabello
+registers: 4, depth: 14, 
+h-gate
+h-gate
+h-gate
+wire
+t-gate
+wire
+t-gate
+wire
+B, A: 2, 0
+wire
+wire
+wire
+wire
+h-gate
+wire
+wire
+wire
+wire
+wire
+x-gate
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+x-gate
+wire
+wire
+A, B: 2, 3
+B, A: 1, 0
+wire
+wire
+wire
+wire
+x-gate
+wire
+wire
+A, B: 1, 3
+wire
+A, B: 0, 2
+wire
+wire
+end-of-descriptor
+
+execution identifier: cabello_u
+registers: 4, depth: 14, 
+h-gate
+h-gate
+h-gate
+wire
+t-gate
+wire
+t-gate
+wire
+B, A: 2, 0
+wire
+wire
+wire
+wire
+h-gate
+wire
+wire
+wire
+wire
+wire
+x-gate
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+wire
+x-gate
+wire
+wire
+A, B: 2, 3
+B, A: 1, 0
+wire
+wire
+wire
+wire
+x-gate
+wire
+wire
+A, B: 1, 3
+wire
+A, B: 0, 2
+wire
+wire
+end-of-descriptor
